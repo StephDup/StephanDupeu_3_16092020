@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+  text-align: center;
+  font-size: 4.5vw;
+}
+body h2 {
+  font-weight: bold;
+}
+
+header img {
+  display: block;
+  margin: 15px auto 10px auto;
+  width: 45%;
+}
+
+footer {
+  height: 100px;
+  background-color: black;
+}
+
+.location {
+  margin: 15px auto;
+  background-color: linear-gradient(to top, #ff66d5, black);
+}
+.location__city {
+  font-weight: bold;
+}
+.location__city i {
+  font-size: 3vm;
+  margin-right: 10px;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3Nhc3MvYmFzZS9fdHlwb2dyYXBoeS5zY3NzIiwiLi4vLi4vc2Fzcy9iYXNlL19iYXNlLnNjc3MiLCIuLi9zdHlsZS5jc3MiLCIuLi8uLi9zYXNzL2xheW91dHMvX2hlYWRlci5zY3NzIiwiLi4vLi4vc2Fzcy9sYXlvdXRzL19mb290ZXIuc2NzcyIsIi4uLy4uL3Nhc3MvcGFnZXMvX21haW5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQVEsNEZBQUE7QUNBUjtFQUNJLGlDQUFBO0VBQ0EsWUFBQTtFQUNBLGtCQUFBO0VBQ0EsZ0JBQUE7QUNFSjtBRERJO0VBQ0ksaUJBQUE7QUNHUjs7QUNSSTtFQUNJLGNBQUE7RUFDQSwyQkFBQTtFQUNBLFVBQUE7QURXUjs7QUVmQTtFQUNJLGFBQUE7RUFDQSx1QkFBQTtBRmtCSjs7QUdwQkE7RUFDSSxpQkFBQTtFQUNBLHlEQUFBO0FIdUJKO0FHdEJJO0VBQ0ksaUJBQUE7QUh3QlI7QUd2QlE7RUFDSSxjQUFBO0VBQ0Esa0JBQUE7QUh5QloiLCJmaWxlIjoic3R5bGUuY3NzIn0= */

@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  margin: auto;
+  text-align: center;
+  font-size: 3.5vw;
+}
+body h2 {
+  font-size: 6vw;
+  font-weight: bold;
+  padding: 10px 0;
+}
+body h3 {
+  font-weight: bold;
+  font-size: 5vw;
+}
+body p {
+  margin: 0 15%;
+}
+
+button {
+  background-image: linear-gradient(to top, #9356DC, 50%, #FF79DA);
+  padding: 1vw 5vw;
+  height: 12vw;
+  cursor: pointer;
+  color: #F6F6F6;
+  font-weight: bold;
+  font-size: 4vw;
+  border: solid 2px #F6F6F6;
+  box-shadow: 0px 5px 2px #EAEAEA;
+  border-radius: 25vw;
+}
+
+.step {
+  position: relative;
+  margin: 4vw 5%;
+  padding: 7vw 0;
+  background-color: #F6F6F6;
+  border-radius: 6vw;
+  box-shadow: 1vw 1vw 1.5vw #EAEAEA;
+  text-align: left;
+  font-weight: bold;
+}
+.step::before {
+  counter-increment: step-nbr;
+  content: counter(step-nbr);
+  position: absolute;
+  left: -3%;
+  top: 33%;
+  background-color: #9356DC;
+  color: white;
+  line-height: 7vw;
+  width: 7vw;
+  text-align: center;
+  border-radius: 50%;
+}
+.step i {
+  padding-left: 8vw;
+}
+.step span {
+  padding-left: 4vw;
+}
+
+.restaurant .restaurant-img img {
+  width: 200px;
+}
+
+header {
+  padding: 15px 0;
+}
+header img {
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+.location {
+  padding: 20px 0;
+  background-image: linear-gradient(to top, #EAEAEA, 99%, black);
+  font-size: 4vw;
+}
+.location__city {
+  font-weight: bold;
+}
+.location__city i {
+  font-size: 4vw;
+  margin-right: 15px;
+}
+
+.explore .book {
+  background-color: #F6F6F6;
+  padding: 15px 0 45px 0;
+}
+.explore .book p {
+  padding-bottom: 25px;
+}
+.explore .tutorial {
+  background-color: white;
+  padding: 15px 0 45px 0;
+  counter-reset: step-nbr;
+}
+.explore .tutorial h2 {
+  text-align: left;
+  margin-left: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */

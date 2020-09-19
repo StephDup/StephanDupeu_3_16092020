@@ -1,0 +1,30 @@
+.step {
+    position: relative;
+    margin: 4vw 5%;
+    padding: 7vw 0;
+    background-color: $color-grey--light;
+    border-radius: 6vw;
+    box-shadow: 1vw 1vw 1.5vw $color-grey--dark;
+    text-align: left;
+    font-weight: bold;
+    &::before {
+        counter-increment: step-nbr;
+        content: counter(step-nbr);
+        position: absolute;
+        left: -3%;
+        top: 33%;
+        background-color: $color-primary;
+        color: white;
+        line-height: 7vw;
+        width: 7vw;
+        text-align: center;
+        border-radius: 50%;
+    }
+    i {
+        padding-left: 8vw;
+    }
+
+    span {
+        padding-left: 4vw;
+    }
+}
