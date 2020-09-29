@@ -1,0 +1,44 @@
+@keyframes loadingspinner{
+    from {
+        opacity: 1;
+    }
+    70% {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        z-index: -2;
+    }
+}
+
+@keyframes ringspin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.loadingspinner {
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    animation: loadingspinner 1500ms linear both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:after {
+        content: "";
+        width: 30vw;
+        height: 30vw;
+        border-radius: 50%;
+        border: 10vw solid $color-primary;
+        border-color: $color-primary transparent $color-primary transparent;
+        animation: ringspin 1500ms linear both;
+    }
+}

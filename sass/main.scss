@@ -2,10 +2,14 @@
 @import "./utils/mixins";
 @import "./base/base";
 @import "./base/typography";
+@import "./components/loadingspinner";
+@import "./components/heart";
 @import "./components/button";
+@import "./components/food-panel";
 @import "./components/step";
-@import "./components/restaurant";
+@import "./components/thumbnail";
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./layouts/location";
-@import "./pages/mainpage";
+@import "./pages/index";
+@import "./pages/restaurantpage";

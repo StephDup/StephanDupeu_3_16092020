@@ -1,0 +1,13 @@
+.location {
+    padding: 15px 0;
+    font-size: 4vw;
+    background-color: $color-grey--dark;
+    text-align: center;
+    &__city {
+        font-weight: bold;
+        i {
+            font-size: 4vw;
+            margin-right: 15px;
+        }
+    }
+}

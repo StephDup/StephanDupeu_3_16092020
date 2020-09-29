@@ -1,8 +1,29 @@
-header {
-    padding: 15px 0;
+.header {
+    width: 100%;
+    padding: 3vw 0;
+    box-shadow: 2px 2px 4px grey;
+    position: fixed;
+    background-color: white;
+    height: 10vw;
+    z-index: 3;
+    &__return {
+        display: none;
+    }
     img {
         display: block;
         margin: auto;
         width: 50%;
+    }
+    &--back {
+        &__return {
+            font-size: 5vw;
+            color: black;
+            position: fixed;
+            top: 5vw;
+            left: 7vw;
+        }
+    }
+    &__blank {
+        height: 16vw;
     }
 }

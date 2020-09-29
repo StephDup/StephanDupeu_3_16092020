@@ -1,0 +1,46 @@
+@keyframes heartchecked {
+    from {
+        opacity: 0;
+        font-size: 7vw;
+    }
+    50% {
+        font-size: 10vw;
+    }
+    to {
+        opacity: 1;
+        font-size: 7vw;
+    }
+}
+
+.heart {
+    input {
+        display: none;
+        + label i {
+            cursor: pointer;
+            font-size: 7vw;
+            transform: scale(1);
+        }
+        &:not(:checked) {
+            + label i:first-child {
+                display: inline;
+            }
+            + label i:last-child {
+                display: none;
+            }
+        }
+        &:checked {
+            + label i:first-child {
+                display: none;
+            }
+            + label i:last-child {
+                display: inline;
+                animation: heartchecked 200ms linear both;
+            }
+        }
+    }
+    label {
+        i:last-child {
+            color: $color-primary;
+        }
+    }
+}

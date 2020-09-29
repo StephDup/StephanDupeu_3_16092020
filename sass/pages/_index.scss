@@ -1,0 +1,38 @@
+.main {    
+    .explore {
+        .book {
+            background-color: $color-grey--light;
+            padding: 8vw 0 14vw 0;
+            text-align: center;
+            h2 {
+                margin: 0 20%;
+                padding-bottom: 3vw;
+            }
+            p {
+                padding-bottom: 4vw;
+            }
+        }
+        .tutorial {
+            background-color: white;
+            padding: 8vw 0 14vw 0;
+            counter-reset: step-nbr;
+            h2 {
+                text-align: left;
+                margin-left: $title-left-margin;
+            }
+        }
+    }
+
+    #restaurants-list {
+        padding: 8vw 0;
+        background-color: $color-grey--light;
+        h2 {
+            text-align: left;
+            margin-left: $title-left-margin;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}

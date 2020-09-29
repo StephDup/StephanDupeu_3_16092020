@@ -27,4 +27,10 @@
     span {
         padding-left: 4vw;
     }
+    &:last-child {
+        background-color: lighten($color-primary, 35);
+        i {
+            color: $color-primary;
+        }
+    }
 }

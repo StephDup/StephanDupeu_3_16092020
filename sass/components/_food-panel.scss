@@ -1,0 +1,99 @@
+@keyframes loadingfood {
+    0% {
+        transform: translateX(125vw);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0vw);
+        opacity: 1;
+    }
+}
+
+.food-panel {
+    animation: loadingfood 600ms both;
+        @for $i from 1 through 9 {
+            &:nth-child(#{$i}n) {
+                animation-delay: #{$i * 100}ms;
+            }
+        }
+    &__checkbox {
+        display: none;
+        &:checked + label .food-panel__label__box__content__left {
+            width: 57vw;
+        }
+        &:checked + label .food-panel__label__box__content__right__checked i {
+            transform: rotate(0deg);
+        }
+    }
+    &__label {
+        &__box {
+            width: 100%;
+            border-radius: 4vw;
+            box-shadow: 1vw 1vw 1.5vw $color-grey--dark;
+            overflow: hidden;
+            margin-bottom: 5vw;
+            &__content {
+                width: 125vw;
+                cursor: pointer;
+                display: flex;
+                flex-wrap: nowrap;
+                background-color: white;
+                overflow: hidden;
+                &__left {
+                    width: 72vw;
+                    padding: 3vw 1vw 3vw 5vw;
+                    display: flex;
+                    flex-direction: column;
+                    transition: width 255ms ease-in-out;
+                    &__title {
+                        font-size: 4.6vw;
+                        font-weight: bold;
+                        padding-right: 1vw;
+                        padding-bottom: 1.5vw;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    &__desc {
+                        font-size: 3.6vw;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                }
+                &__right {
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: row;
+                    &__price {
+                        width: 7vw;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-end;
+                        font-size: 4.5vw;
+                        font-weight: bold;
+                        padding: 3vw 5vw 3vw 1vw;
+                    }
+                    &__checked {
+                        width: 14vw;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: $color-tertiary;
+                        text-align: center;
+                        position: relative;
+                        i {
+                            font-size: 8vw;
+                            color: white;
+                            transform: rotate(180deg);
+                            transition: transform 300ms ease-in-out;
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}
