@@ -7,6 +7,13 @@
     box-shadow: 1vw 1vw 1.5vw $color-grey--dark;
     text-align: left;
     font-weight: bold;
+    @include desktop-only {
+        width: 60%;
+        margin: 10px;
+        padding: 15px 20px;
+        border-radius: 15px;
+        text-align: center;
+    }
     &::before {
         counter-increment: step-nbr;
         content: counter(step-nbr);
@@ -19,13 +26,24 @@
         width: 7vw;
         text-align: center;
         border-radius: 50%;
+        @include desktop-only {
+            top: 25%;
+            line-height: 30px;
+            width: 30px;
+        }
     }
     i {
         padding-left: 8vw;
+        @include desktop-only {
+            padding-left: 20px;
+        }
     }
 
     span {
         padding-left: 4vw;
+        @include desktop-only {
+            padding-left: 5px;
+        }
     }
     &:last-child {
         background-color: lighten($color-primary, 35);

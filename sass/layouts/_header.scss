@@ -13,6 +13,10 @@
         display: block;
         margin: auto;
         width: 50%;
+        @include desktop-only {
+            width : 300px;
+            margin-left: 100px;
+        }
     }
     &--back {
         &__return {
@@ -21,9 +25,23 @@
             position: fixed;
             top: 5vw;
             left: 7vw;
+            @include desktop-only {
+                font-size: 30px;
+                position: absolute;
+                top: 20px;
+                left: 20px;
+            }
         }
     }
     &__blank {
         height: 16vw;
+        @include desktop-only {
+            display: none;
+        }
+    }
+    @include desktop-only {
+        position: relative;
+        height: 55px;
+        padding: 10px 0;
     }
 }

@@ -5,10 +5,21 @@ body {
   text-align: left;
   font-size: 3.9vw;
 }
+@media screen and (min-width: 720px) {
+  body {
+    font-size: 20px;
+  }
+}
 body main h2 {
   font-size: 6vw;
   font-weight: bold;
-  padding-top: 20px;
+  padding-top: 4vw;
+}
+@media screen and (min-width: 720px) {
+  body main h2 {
+    font-size: 26px;
+    padding-top: 0;
+  }
 }
 body main h3 {
   font-weight: bold;
@@ -60,43 +71,46 @@ body main p {
   border-color: #9356DC transparent #9356DC transparent;
   animation: ringspin 1500ms linear both;
 }
+@media screen and (min-width: 720px) {
+  .loadingspinner:after {
+    width: 300px;
+    height: 300px;
+    border: 100px solid #9356DC;
+    border-color: #9356DC transparent #9356DC transparent;
+  }
+}
 
 @keyframes heartchecked {
   from {
     opacity: 0;
-    font-size: 7vw;
-  }
-  50% {
-    font-size: 10vw;
   }
   to {
     opacity: 1;
-    font-size: 7vw;
   }
 }
-.heart input {
-  display: none;
-}
-.heart input + label i {
+.heart {
   cursor: pointer;
+}
+.heart i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   font-size: 7vw;
-  transform: scale(1);
 }
-.heart input:not(:checked) + label i:first-child {
-  display: inline;
+@media screen and (min-width: 720px) {
+  .heart i {
+    font-size: 26px;
+  }
 }
-.heart input:not(:checked) + label i:last-child {
-  display: none;
-}
-.heart input:checked + label i:first-child {
-  display: none;
-}
-.heart input:checked + label i:last-child {
-  display: inline;
-  animation: heartchecked 200ms linear both;
-}
-.heart label i:last-child {
+.heart i:last-child {
+  opacity: 0;
   color: #9356DC;
+}
+.heart:hover i:first-child {
+  animation: heartchecked 400ms linear both reverse;
+}
+.heart:hover i:last-child {
+  animation: heartchecked 400ms linear both;
 }
 
 button {
@@ -114,8 +128,22 @@ button {
   transition: box-shadow 500ms;
   z-index: 1;
 }
+@media screen and (min-width: 720px) {
+  button {
+    font-size: 20px;
+    height: 50px;
+    padding: 5px 15px;
+    border-radius: 30px;
+    box-shadow: 0 2px 2px grey;
+  }
+}
 button:hover {
   box-shadow: 0vw 2vw 2vw grey;
+}
+@media screen and (min-width: 720px) {
+  button:hover {
+    box-shadow: 0 5px 3px grey;
+  }
 }
 button:hover::after {
   opacity: 0.1;
@@ -139,7 +167,7 @@ button::after {
     transform: translateX(125vw);
     opacity: 0;
   }
-  50% {
+  20% {
     opacity: 0;
   }
   100% {
@@ -183,6 +211,11 @@ button::after {
 .food-panel__checkbox:checked + label .food-panel__label__box__content__left {
   width: 57vw;
 }
+@media screen and (min-width: 720px) {
+  .food-panel__checkbox:checked + label .food-panel__label__box__content__left {
+    width: 50%;
+  }
+}
 .food-panel__checkbox:checked + label .food-panel__label__box__content__right__checked i {
   transform: rotate(0deg);
 }
@@ -193,6 +226,14 @@ button::after {
   overflow: hidden;
   margin-bottom: 5vw;
 }
+@media screen and (min-width: 720px) {
+  .food-panel__label__box {
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px #EAEAEA;
+    margin-bottom: 15px;
+    justify-content: flex-start;
+  }
+}
 .food-panel__label__box__content {
   width: 125vw;
   cursor: pointer;
@@ -201,12 +242,23 @@ button::after {
   background-color: white;
   overflow: hidden;
 }
+@media screen and (min-width: 720px) {
+  .food-panel__label__box__content {
+    width: 120%;
+  }
+}
 .food-panel__label__box__content__left {
   width: 72vw;
   padding: 3vw 1vw 3vw 5vw;
   display: flex;
   flex-direction: column;
   transition: width 255ms ease-in-out;
+}
+@media screen and (min-width: 720px) {
+  .food-panel__label__box__content__left {
+    padding: 5px 0;
+    width: 67%;
+  }
 }
 .food-panel__label__box__content__left__title {
   font-size: 4.6vw;
@@ -217,16 +269,36 @@ button::after {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media screen and (min-width: 720px) {
+  .food-panel__label__box__content__left__title {
+    font-size: 20px;
+    padding: 0;
+    padding-left: 15px;
+  }
+}
 .food-panel__label__box__content__left__desc {
   font-size: 3.6vw;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@media screen and (min-width: 720px) {
+  .food-panel__label__box__content__left__desc {
+    font-size: 16px;
+    padding-left: 15px;
+  }
+}
 .food-panel__label__box__content__right {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+}
+@media screen and (min-width: 720px) {
+  .food-panel__label__box__content__right {
+    flex: 1;
+    width: 40%;
+    max-width: 40%;
+  }
 }
 .food-panel__label__box__content__right__price {
   width: 7vw;
@@ -237,6 +309,14 @@ button::after {
   font-weight: bold;
   padding: 3vw 5vw 3vw 1vw;
 }
+@media screen and (min-width: 720px) {
+  .food-panel__label__box__content__right__price {
+    width: 50%;
+    font-size: 18px;
+    align-items: center;
+    padding: 0;
+  }
+}
 .food-panel__label__box__content__right__checked {
   width: 14vw;
   display: flex;
@@ -246,11 +326,23 @@ button::after {
   text-align: center;
   position: relative;
 }
+@media screen and (min-width: 720px) {
+  .food-panel__label__box__content__right__checked {
+    width: 50%;
+  }
+}
 .food-panel__label__box__content__right__checked i {
   font-size: 8vw;
   color: white;
   transform: rotate(180deg);
   transition: transform 300ms ease-in-out;
+}
+@media screen and (min-width: 720px) {
+  .food-panel__label__box__content__right__checked i {
+    position: relative;
+    left: -15px;
+    font-size: 30px;
+  }
 }
 
 .step {
@@ -262,6 +354,15 @@ button::after {
   box-shadow: 1vw 1vw 1.5vw #EAEAEA;
   text-align: left;
   font-weight: bold;
+}
+@media screen and (min-width: 720px) {
+  .step {
+    width: 60%;
+    margin: 10px;
+    padding: 15px 20px;
+    border-radius: 15px;
+    text-align: center;
+  }
 }
 .step::before {
   counter-increment: step-nbr;
@@ -276,11 +377,28 @@ button::after {
   text-align: center;
   border-radius: 50%;
 }
+@media screen and (min-width: 720px) {
+  .step::before {
+    top: 25%;
+    line-height: 30px;
+    width: 30px;
+  }
+}
 .step i {
   padding-left: 8vw;
 }
+@media screen and (min-width: 720px) {
+  .step i {
+    padding-left: 20px;
+  }
+}
 .step span {
   padding-left: 4vw;
+}
+@media screen and (min-width: 720px) {
+  .step span {
+    padding-left: 5px;
+  }
 }
 .step:last-child {
   background-color: #f2eafb;
@@ -298,10 +416,23 @@ button::after {
   box-shadow: 0vw 1vw 2vw #c9c9c9;
   margin-bottom: 4vw;
 }
+@media screen and (min-width: 720px) {
+  .thumbnail {
+    border-radius: 25px;
+    margin-bottom: 15px;
+    width: 300px;
+  }
+}
 .thumbnail__img img {
   width: 100%;
   height: 40vw;
   object-fit: cover;
+}
+@media screen and (min-width: 720px) {
+  .thumbnail__img img {
+    width: 300px;
+    height: 200px;
+  }
 }
 .thumbnail__heading {
   height: 12vw;
@@ -311,15 +442,35 @@ button::after {
   padding: 3vw 4vw 3vw 5vw;
   position: relative;
 }
+@media screen and (min-width: 720px) {
+  .thumbnail__heading {
+    padding: 5px 20px 10px 15px;
+    height: 50px;
+  }
+}
 .thumbnail__heading__title {
   font-weight: bold;
+  font-size: 5vw;
   margin: 0;
   padding-bottom: 2vw;
 }
+@media screen and (min-width: 720px) {
+  .thumbnail__heading__title {
+    font-size: 22px;
+    padding-bottom: 2px;
+  }
+}
 .thumbnail__heading .heart {
   position: absolute;
-  right: 5%;
+  right: 15%;
   top: 30%;
+  z-index: 2;
+}
+@media screen and (min-width: 720px) {
+  .thumbnail__heading .heart {
+    right: 40px;
+    top: 10px;
+  }
 }
 .thumbnail--new::before {
   content: "Nouveau";
@@ -330,6 +481,14 @@ button::after {
   background-color: #99E2D0;
   padding: 1vw 3vw;
   border-radius: 1vw;
+}
+@media screen and (min-width: 720px) {
+  .thumbnail--new::before {
+    right: 15px;
+    top: 15px;
+    padding: 5px 10px;
+    border-radius: 8px;
+  }
 }
 
 .header {
@@ -349,6 +508,12 @@ button::after {
   margin: auto;
   width: 50%;
 }
+@media screen and (min-width: 720px) {
+  .header img {
+    width: 300px;
+    margin-left: 100px;
+  }
+}
 .header--back__return {
   font-size: 5vw;
   color: black;
@@ -356,8 +521,28 @@ button::after {
   top: 5vw;
   left: 7vw;
 }
+@media screen and (min-width: 720px) {
+  .header--back__return {
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+}
 .header__blank {
   height: 16vw;
+}
+@media screen and (min-width: 720px) {
+  .header__blank {
+    display: none;
+  }
+}
+@media screen and (min-width: 720px) {
+  .header {
+    position: relative;
+    height: 55px;
+    padding: 10px 0;
+  }
 }
 
 footer {
@@ -367,6 +552,15 @@ footer {
   display: flex;
   flex-direction: column;
 }
+@media screen and (min-width: 720px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px;
+  }
+}
 footer h1 {
   margin: 0;
   padding: 0 0 4vw 0;
@@ -374,17 +568,33 @@ footer h1 {
   font-size: 5vw;
   font-weight: 100;
 }
+@media screen and (min-width: 720px) {
+  footer h1 {
+    padding: 0;
+    font-size: 35px;
+  }
+}
 footer a {
   text-decoration: none;
   color: white;
   padding-bottom: 2vw;
 }
+@media screen and (min-width: 720px) {
+  footer a {
+    padding: 0;
+  }
+}
 footer a i {
   padding-right: 2vw;
 }
+@media screen and (min-width: 720px) {
+  footer a i {
+    padding: 0 15px 0 0;
+  }
+}
 
 .location {
-  padding: 15px 0;
+  padding: 2vw 0;
   font-size: 4vw;
   background-color: #EAEAEA;
   text-align: center;
@@ -394,7 +604,25 @@ footer a i {
 }
 .location__city i {
   font-size: 4vw;
-  margin-right: 15px;
+  margin-right: 2vw;
+}
+@media screen and (min-width: 720px) {
+  .location__city i {
+    font-size: 1em;
+    margin-right: 10px;
+  }
+}
+@media screen and (min-width: 720px) {
+  .location {
+    padding: 10px 0;
+    font-size: 25px;
+    position: absolute;
+    top: 10px;
+    right: 75px;
+    text-align: right;
+    z-index: 3;
+    background-color: white;
+  }
 }
 
 .main .explore .book {
@@ -402,48 +630,117 @@ footer a i {
   padding: 8vw 0 14vw 0;
   text-align: center;
 }
+@media screen and (min-width: 720px) {
+  .main .explore .book {
+    padding: 50px 0;
+    width: 50%;
+  }
+}
 .main .explore .book h2 {
   margin: 0 20%;
   padding-bottom: 3vw;
 }
+@media screen and (min-width: 720px) {
+  .main .explore .book h2 {
+    padding-bottom: 30px;
+    margin: 0 100px;
+  }
+}
 .main .explore .book p {
   padding-bottom: 4vw;
 }
+@media screen and (min-width: 720px) {
+  .main .explore .book p {
+    padding-bottom: 25px;
+  }
+}
 .main .explore .tutorial {
   background-color: white;
+  text-align: center;
   padding: 8vw 0 14vw 0;
   counter-reset: step-nbr;
+}
+@media screen and (min-width: 720px) {
+  .main .explore .tutorial {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+  }
 }
 .main .explore .tutorial h2 {
   text-align: left;
   margin-left: 7vw;
 }
+@media screen and (min-width: 720px) {
+  .main .explore .tutorial h2 {
+    margin-left: 10px;
+  }
+}
+@media screen and (min-width: 720px) {
+  .main .explore {
+    display: flex;
+  }
+}
 .main #restaurants-list {
   padding: 8vw 0;
   background-color: #F6F6F6;
+}
+@media screen and (min-width: 720px) {
+  .main #restaurants-list {
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
 .main #restaurants-list h2 {
   text-align: left;
   margin-left: 7vw;
 }
+@media screen and (min-width: 720px) {
+  .main #restaurants-list h2 {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+}
 .main #restaurants-list a {
   text-decoration: none;
   color: black;
 }
-
-.heading-img {
-  width: 100%;
+@media screen and (min-width: 720px) {
+  .main #restaurants-list a {
+    margin: 20px 10px;
+  }
 }
-.heading-img img {
-  width: 100%;
+@media screen and (min-width: 720px) {
+  .main {
+    max-width: 1280px;
+    margin: auto;
+  }
 }
 
 .main-restaurant .main-img {
   position: relative;
   top: 15vw;
 }
+@media screen and (min-width: 720px) {
+  .main-restaurant .main-img {
+    top: 0;
+  }
+}
 .main-restaurant .main-img .heading-img {
   width: 100%;
+  height: 70vw;
+}
+@media screen and (min-width: 720px) {
+  .main-restaurant .main-img .heading-img {
+    height: 500px;
+    overflow: hidden;
+  }
 }
 .main-restaurant .main-img .heading-img img {
   width: 100%;
@@ -457,6 +754,15 @@ footer a i {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (min-width: 720px) {
+  .main-restaurant .rest-menu {
+    padding: 20px 20px;
+    border-radius: 60px 60px 0 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .main-restaurant .rest-menu__title {
   font-family: Shrikhand, sans-serif;
   font-weight: 400;
@@ -465,20 +771,46 @@ footer a i {
   font-size: 7.5vw;
   align-self: flex-start;
 }
+@media screen and (min-width: 720px) {
+  .main-restaurant .rest-menu__title {
+    padding-top: 20px;
+    font-size: 52px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+}
 .main-restaurant .rest-menu .heart {
   position: absolute;
   top: 12vw;
-  right: 8vw;
+  right: 10vw;
+}
+@media screen and (min-width: 720px) {
+  .main-restaurant .rest-menu .heart {
+    top: 20px;
+    right: 50px;
+  }
 }
 .main-restaurant .rest-menu .food-type {
   overflow: hidden;
   width: 100%;
+}
+@media screen and (min-width: 720px) {
+  .main-restaurant .rest-menu .food-type {
+    width: 30%;
+    margin: 0 15px;
+  }
 }
 .main-restaurant .rest-menu .food-type__title {
   font-weight: 200;
   text-transform: uppercase;
   margin: 0;
   font-size: 5vw;
+}
+@media screen and (min-width: 720px) {
+  .main-restaurant .rest-menu .food-type__title {
+    font-size: 24px;
+  }
 }
 .main-restaurant .rest-menu .food-type hr {
   width: 15%;
@@ -488,8 +820,26 @@ footer a i {
   margin-right: 90%;
   margin-bottom: 5vw;
 }
+@media screen and (min-width: 720px) {
+  .main-restaurant .rest-menu .food-type hr {
+    height: 2px;
+    margin-bottom: 20px;
+    margin-right: 95%;
+  }
+}
 .main-restaurant .rest-menu button {
   margin: 6vw auto;
+}
+@media screen and (min-width: 720px) {
+  .main-restaurant .rest-menu button {
+    margin: 20px auto;
+  }
+}
+@media screen and (min-width: 720px) {
+  .main-restaurant {
+    max-width: 1280px;
+    margin: auto;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
