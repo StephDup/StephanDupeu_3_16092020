@@ -220,6 +220,7 @@ button::after {
   transform: rotate(0deg);
 }
 .food-panel__label__box {
+  display: block;
   width: 100%;
   border-radius: 4vw;
   box-shadow: 1vw 1vw 1.5vw #EAEAEA;
@@ -561,7 +562,7 @@ footer {
     padding: 50px 100px;
   }
 }
-footer h1 {
+footer h1, footer h2 {
   margin: 0;
   padding: 0 0 4vw 0;
   font-family: Shrikhand, sans-serif;
@@ -569,7 +570,7 @@ footer h1 {
   font-weight: 100;
 }
 @media screen and (min-width: 720px) {
-  footer h1 {
+  footer h1, footer h2 {
     padding: 0;
     font-size: 35px;
   }

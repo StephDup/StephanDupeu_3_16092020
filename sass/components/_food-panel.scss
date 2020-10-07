@@ -33,6 +33,7 @@
     }
     &__label {
         &__box {
+            display: block;
             width: 100%;
             border-radius: 4vw;
             box-shadow: 1vw 1vw 1.5vw $color-grey--dark;
